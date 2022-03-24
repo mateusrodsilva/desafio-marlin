@@ -3,22 +3,27 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EscolaDeIdiomas.WebApi.Domains
 {
-    [Table("Alunos")]
     public class Aluno
     {
-        [Key] //Define chave primária
-        public Guid idAluno { get; set; }
+        public Aluno(string nomeCompleto, string cpf, string email)
+        {
+            this.idAluno = new Guid();
+            this.nomeCompleto = nomeCompleto;
+            this.cpf = cpf;
+            this.email = email;
+        }
 
-        [Column(TypeName = "VARCHAR(150)")] //Define tipo de dado
+        public Guid idAluno { get; set; }
+        
         [Required(ErrorMessage = "O nome completo é obrigatório!")] //Define que a propriedade é obrigatória
         public string nomeCompleto { get; set; }
 
-        [Column(TypeName = "VARCHAR(11)")]
         [Required(ErrorMessage = "O CPF é obrigatório!")]
         public string cpf { get; set; }
 
-        [Column(TypeName = "VARCHAR(150)")]
         [Required(ErrorMessage = "O e-mail é obrigatório!")]
         public string email { get; set; }
+
+        public ICollection<Matricula> Matriculas { get; set; } // Referenciando lista de Matriculas para o relacionamento entre as tabelas
     }
 }

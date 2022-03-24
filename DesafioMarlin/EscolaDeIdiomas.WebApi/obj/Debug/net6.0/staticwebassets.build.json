@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "c1kuOO1omB5yUin1eHcehQCqZ2yzp0nrHHQnBgsOsik=",
+  "Source": "EscolaDeIdiomas.WebApi",
+  "BasePath": "_content/EscolaDeIdiomas.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

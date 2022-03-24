@@ -3,17 +3,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EscolaDeIdiomas.WebApi.Domains
 {
-    [Table("Turmas")]
     public class Turma
     {
-        [Key] //Define chave primária
         public Guid idTurma { get; set; }
 
-        [Column(TypeName = "INTEGER")] //Define tipo de dado
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //Define o auto-incremento
+        [Required(ErrorMessage = "O número da turma é obrigatório")]
         public int numeroTurma { get; set; }
 
-        [Column(TypeName = "VARCHAR(4)")]
+        [Required(ErrorMessage = "O ano letivo da turma é obrigatório")]
         public string anoLetivo { get; set; }
+        
+        [Required(ErrorMessage = "A descrição da turma é obrigatório")]
+        public string decricaoTurma { get; set; }
+
+        public ICollection<Matricula> Matriculas { get; set; }
+
     }
 }
