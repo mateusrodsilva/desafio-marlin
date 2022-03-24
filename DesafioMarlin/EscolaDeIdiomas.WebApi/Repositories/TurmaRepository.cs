@@ -23,7 +23,7 @@ namespace EscolaDeIdiomas.WebApi.Repositories
                 throw new Exception("Turma não encontrada");
             }
 
-            if (turmaAtualizada.numeroTurma != null && turmaAtualizada.anoLetivo != null && turmaAtualizada.descricaoTurma != null)
+            if (turmaAtualizada.numeroTurma != 0 && turmaAtualizada.anoLetivo != null && turmaAtualizada.descricaoTurma != null)
             {
                 turmaBuscada.numeroTurma = turmaAtualizada.numeroTurma;
                 turmaBuscada.anoLetivo = turmaAtualizada.anoLetivo;
