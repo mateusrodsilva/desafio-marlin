@@ -4,6 +4,6 @@
     {
         public int numeroTurma { get; set; }
         public string anoLetivo { get; set; }
-        public string decricaoTurma { get; set; }
+        public string descricaoTurma { get; set; }
     }
 }
