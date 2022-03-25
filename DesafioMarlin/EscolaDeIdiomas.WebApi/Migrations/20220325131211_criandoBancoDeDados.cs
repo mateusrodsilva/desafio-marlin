@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EscolaDeIdiomas.WebApi.Migrations
 {
-    public partial class db : Migration
+    public partial class criandoBancoDeDados : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

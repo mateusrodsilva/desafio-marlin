@@ -124,3 +124,5 @@ C:\Users\mrodr.LAPTOP-DFNK1JF6\Desktop\desafio-marvin\DesafioMarlin\EscolaDeIdio
 C:\Users\mrodr.LAPTOP-DFNK1JF6\Desktop\desafio-marvin\DesafioMarlin\EscolaDeIdiomas.WebApi\obj\Debug\net6.0\EscolaDeIdiomas.WebApi.csproj.CopyComplete
 C:\Users\mrodr.LAPTOP-DFNK1JF6\Desktop\desafio-marvin\DesafioMarlin\EscolaDeIdiomas.WebApi\obj\Debug\net6.0\EscolaDeIdiomas.WebApi.genruntimeconfig.cache
 C:\Users\mrodr.LAPTOP-DFNK1JF6\Desktop\desafio-marvin\DesafioMarlin\EscolaDeIdiomas.WebApi\obj\Debug\net6.0\ref\EscolaDeIdiomas.WebApi.dll
+C:\Users\Mateus\Desktop\desafio-marvin\DesafioMarlin\EscolaDeIdiomas.WebApi\bin\Debug\net6.0\EscolaDeIdiomas.WebApi.xml
+C:\Users\Mateus\Desktop\desafio-marvin\DesafioMarlin\EscolaDeIdiomas.WebApi\obj\Debug\net6.0\EscolaDeIdiomas.WebApi.xml

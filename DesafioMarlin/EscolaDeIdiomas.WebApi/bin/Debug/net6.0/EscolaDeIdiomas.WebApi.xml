@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EscolaDeIdiomas.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.AlunoController.GetAll">
+            <summary>
+            Lista todos os alunos cadastrados
+            </summary>
+            <returns>Status Code Ok com a lista de alunos</returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.AlunoController.Post(EscolaDeIdiomas.WebApi.Commands.NovoAlunoCommand)">
+            <summary>
+            Cadastra um novo aluno na plataforma
+            </summary>
+            <param name="novoAluno">Objeto com as informações do aluno e a turma que irá se matricular</param>
+            <returns>Status Code 201</returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.AlunoController.Patch(System.Guid,EscolaDeIdiomas.WebApi.Commands.AlunoCommand)">
+            <summary>
+            Atualiza o cadastro de um aluno
+            </summary>
+            <param name="id">Id do aluno que será atualizado</param>
+            <param name="alunoAtualizado">Objeto com as novas informações sobre o aluno</param>
+            <returns>Status Code 204</returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.AlunoController.Delete(System.Guid)">
+            <summary>
+            Exclui um aluno
+            </summary>
+            <param name="id">Id do aluno que será excluido</param>
+            <returns>Status Code 204</returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.MatriculaController.GetAll">
+            <summary>
+            Lista todas as matriculas
+            </summary>
+            <returns>Status Code Ok com lista de matriculas</returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.MatriculaController.Post(EscolaDeIdiomas.WebApi.Commands.MatriculaCommand)">
+            <summary>
+            Cadastra uma nova matricula
+            </summary>
+            <param name="novaMatricula">Objeto com as informações da matrícula (idAluno e idTurma)</param>
+            <returns>Status Code 201</returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.MatriculaController.Delete(System.Guid)">
+            <summary>
+            Exclui uma matricula
+            </summary>
+            <param name="id">Id da Matricula que será excluída</param>
+            <returns></returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.TurmaController.GetAll">
+            <summary>
+            Lista todas as turmas
+            </summary>
+            <returns>Status Code Ok com lista de turmas</returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.TurmaController.Post(EscolaDeIdiomas.WebApi.Commands.TurmaCommand)">
+            <summary>
+            Cadastra uma nova turma
+            </summary>
+            <param name="novaTurma">Objeto com as informações da turma (numero da sala, ano letivo e descrição da turma)</param>
+            <returns>Status Code 201</returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.TurmaController.Patch(System.Guid,EscolaDeIdiomas.WebApi.Commands.TurmaCommand)">
+            <summary>
+            Atualiza o cadastro de uma turma
+            </summary>
+            <param name="id">Id da turma que será atualizada</param>
+            <param name="turmaAtualizada">Objeto com as novas informações da turma</param>
+            <returns>Status Code 204</returns>
+        </member>
+        <member name="M:EscolaDeIdiomas.WebApi.Controllers.TurmaController.Delete(System.Guid)">
+            <summary>
+            Exclui uma turma
+            </summary>
+            <param name="id">Id da turma que será excluida</param>
+            <returns>Status Code 204</returns>
+        </member>
+    </members>
+</doc>

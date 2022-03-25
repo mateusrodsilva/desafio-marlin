@@ -5,7 +5,7 @@ using EscolaDeIdiomas.WebApi.Interfaces;
 
 namespace EscolaDeIdiomas.WebApi.Repositories
 {
-    public class AlunoRepository : IAlunoRepository
+    public class AlunoRepository : IAlunoRepository //Herdamos os métodos da interface
     {
         private readonly EscolaDeIdiomasContext ctx; //Criamos uma instância do context para maniluplação do banco de dados
 
@@ -15,6 +15,7 @@ namespace EscolaDeIdiomas.WebApi.Repositories
             this.ctx = ctx;
         }
 
+        //Atualiza os dados do Aluno
         public void Atualizar(Guid idAluno, AlunoCommand alunoAtualizado)
         {
             Aluno alunoBuscado = ctx.Alunos.Find(idAluno);
@@ -24,10 +25,9 @@ namespace EscolaDeIdiomas.WebApi.Repositories
                 throw new Exception("Aluno não encontrado");
             }
 
-            if (alunoAtualizado.nomeCompleto != null && alunoAtualizado.cpf != null && alunoAtualizado.email != null)
+            if (alunoAtualizado.nomeCompleto != null && alunoAtualizado.email != null)
             {
                 alunoBuscado.nomeCompleto = alunoAtualizado.nomeCompleto;
-                alunoBuscado.cpf = alunoAtualizado.cpf;
                 alunoBuscado.email = alunoAtualizado.email;
             }
 
@@ -60,6 +60,11 @@ namespace EscolaDeIdiomas.WebApi.Repositories
             if (verificadorEmail != null)
             {
                 throw new Exception("Email já cadastrado! Informe outro Email");
+            }
+
+            if (novoAluno.idTurma == Guid.Empty)
+            {
+                throw new Exception("É obrigatório informar uma turma para realizar seu cadastro");
             }
 
             Aluno aluno = new Aluno(novoAluno.nomeCompleto,

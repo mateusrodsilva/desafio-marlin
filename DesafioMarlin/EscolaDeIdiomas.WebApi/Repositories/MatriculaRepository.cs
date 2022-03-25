@@ -5,7 +5,7 @@ using EscolaDeIdiomas.WebApi.Interfaces;
 
 namespace EscolaDeIdiomas.WebApi.Repositories
 {
-    public class MatriculaRepository : IMatriculaRepository
+    public class MatriculaRepository : IMatriculaRepository //Herdamos os métodos da interface
     {
         private readonly EscolaDeIdiomasContext ctx; //Criamos uma instância do context para maniluplação do banco de dados
 

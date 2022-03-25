@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EscolaDeIdiomas.WebApi.Migrations
 {
     [DbContext(typeof(EscolaDeIdiomasContext))]
-    [Migration("20220325013825_db")]
-    partial class db
+    [Migration("20220325131211_criandoBancoDeDados")]
+    partial class criandoBancoDeDados
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
