@@ -1,0 +1,778 @@
+{
+	"info": {
+		"_postman_id": "55530331-91e3-4dd0-8a30-d9e1bb45fdc3",
+		"name": "EscolaDeIdiomas.WebApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Aluno",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Atualiza o cadastro de um aluno",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nomeCompleto\": \"eiusmod nisi\",\n  \"email\": \"cupidatat mollit\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+													"description": "(Required) Id do aluno que será atualizado"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"nomeCompleto\": \"eiusmod nisi\",\n  \"email\": \"cupidatat mollit\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Aluno/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Aluno",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+															"description": "(Required) Id do aluno que será atualizado"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Exclui um aluno",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Aluno/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Aluno",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+													"description": "(Required) Id do aluno que será excluido"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Aluno/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Aluno",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+															"description": "(Required) Id do aluno que será excluido"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Lista todos os alunos cadastrados",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Aluno",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Aluno"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Aluno",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Aluno"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Cadastra um novo aluno na plataforma",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"nomeCompleto\": \"dolor ut pariatur Excepteur Lorem\",\n  \"cpf\": \"dolore amet nulla\",\n  \"email\": \"mollit\",\n  \"idTurma\": \"99cb2f93-bc16-3a4b-a4ae-898eb3aee46c\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Aluno",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Aluno"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"nomeCompleto\": \"dolor ut pariatur Excepteur Lorem\",\n  \"cpf\": \"dolore amet nulla\",\n  \"email\": \"mollit\",\n  \"idTurma\": \"99cb2f93-bc16-3a4b-a4ae-898eb3aee46c\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Aluno",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Aluno"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Matricula",
+					"item": [
+						{
+							"name": "Lista todas as matriculas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Matricula",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Matricula"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Matricula",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Matricula"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Cadastra uma nova matricula",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"idAluno\": \"urn:uuid:38d45482-944d-2e0b-0a16-4c181964c707\",\n  \"idTurma\": \"urn:uuid:1f5fae59-5f35-68b3-fc1c-31b983173320\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Matricula",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Matricula"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"idAluno\": \"urn:uuid:38d45482-944d-2e0b-0a16-4c181964c707\",\n  \"idTurma\": \"urn:uuid:1f5fae59-5f35-68b3-fc1c-31b983173320\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Matricula",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Matricula"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Exclui uma matricula",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Matricula/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Matricula",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+											"description": "(Required) Id da Matricula que será excluída"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Matricula/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Matricula",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+													"description": "(Required) Id da Matricula que será excluída"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Turma",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "Atualiza o cadastro de uma turma",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"numeroTurma\": 31038556,\n  \"anoLetivo\": \"dolor dolore\",\n  \"descricaoTurma\": \"ullamco veniam\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Turma/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Turma",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+													"description": "(Required) Id da turma que será atualizada"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"numeroTurma\": 31038556,\n  \"anoLetivo\": \"dolor dolore\",\n  \"descricaoTurma\": \"ullamco veniam\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/Turma/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Turma",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+															"description": "(Required) Id da turma que será atualizada"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Exclui uma turma",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Turma/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Turma",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+													"description": "(Required) Id da turma que será excluida"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/Turma/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"Turma",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "693c80af-7215-7eb2-e179-d7a7164a1854",
+															"description": "(Required) Id da turma que será excluida"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Lista todas as turmas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/Turma",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Turma"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/api/Turma",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Turma"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Cadastra uma nova turma",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"numeroTurma\": 31038556,\n  \"anoLetivo\": \"dolor dolore\",\n  \"descricaoTurma\": \"ullamco veniam\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Turma",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Turma"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"numeroTurma\": 31038556,\n  \"anoLetivo\": \"dolor dolore\",\n  \"descricaoTurma\": \"ullamco veniam\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Turma",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Turma"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:5157",
+			"type": "string"
+		}
+	]
+}
