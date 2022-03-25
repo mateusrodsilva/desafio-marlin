@@ -7,7 +7,7 @@ namespace EscolaDeIdiomas.WebApi.Domains
     {
         public Aluno(string nomeCompleto, string cpf, string email)
         {
-            this.idAluno = new Guid();
+            this.idAluno = Guid.NewGuid();
             this.nomeCompleto = nomeCompleto;
             this.cpf = cpf;
             this.email = email;

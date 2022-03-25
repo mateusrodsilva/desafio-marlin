@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EscolaDeIdiomas.WebApi.Migrations
 {
     [DbContext(typeof(EscolaDeIdiomasContext))]
-    [Migration("20220324161708_db")]
+    [Migration("20220325013825_db")]
     partial class db
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,9 +53,6 @@ namespace EscolaDeIdiomas.WebApi.Migrations
                     b.HasIndex("email")
                         .IsUnique();
 
-                    b.HasIndex("nomeCompleto")
-                        .IsUnique();
-
                     b.ToTable("Alunos", (string)null);
                 });
 
@@ -91,7 +88,7 @@ namespace EscolaDeIdiomas.WebApi.Migrations
                         .HasMaxLength(4)
                         .HasColumnType("varchar(4)");
 
-                    b.Property<string>("decricaoTurma")
+                    b.Property<string>("descricaoTurma")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("varchar(200)");

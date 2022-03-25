@@ -9,6 +9,7 @@ namespace EscolaDeIdiomas.WebApi.Repositories
     {
         private readonly EscolaDeIdiomasContext ctx; //Criamos uma instância do context para maniluplação do banco de dados
 
+
         public AlunoRepository(EscolaDeIdiomasContext ctx)
         {
             this.ctx = ctx;
@@ -35,13 +36,49 @@ namespace EscolaDeIdiomas.WebApi.Repositories
             ctx.SaveChanges();
         }
 
-        public void Cadastro(AlunoCommand novoAluno)
+        public Aluno BuscarPorCpf(string cpf)
         {
+            return ctx.Alunos.FirstOrDefault(x => x.cpf == cpf);
+        }
+
+        public Aluno BuscarPorEmail(string email)
+        {
+            return ctx.Alunos.FirstOrDefault(x => x.email == email);
+        }
+
+        public void Cadastro(NovoAlunoCommand novoAluno)
+        {
+            var verificadorCpf = BuscarPorCpf(novoAluno.cpf);
+
+            var verificadorEmail = BuscarPorEmail(novoAluno.email);
+            
+            if (verificadorCpf != null)
+            {
+                throw new Exception("CPF já cadastrado! Informe outro CPF");
+            }
+
+            if (verificadorEmail != null)
+            {
+                throw new Exception("Email já cadastrado! Informe outro Email");
+            }
+
             Aluno aluno = new Aluno(novoAluno.nomeCompleto,
                                     novoAluno.cpf,
                                     novoAluno.email);
 
+            var buscarTurma = ctx.Turmas.FirstOrDefault(x => x.idTurma == novoAluno.idTurma);
+
+            if (buscarTurma == null)
+            {
+                throw new Exception("Turma não encontrada! Informe um id de turma válido");
+            }
+
+
+            Matricula novaMatricula = new Matricula(aluno.idAluno,
+                                                    novoAluno.idTurma);
+
             ctx.Alunos.Add(aluno);
+            ctx.Matriculas.Add(novaMatricula);
             ctx.SaveChanges();
         }
 

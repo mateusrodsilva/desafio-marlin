@@ -5,7 +5,7 @@ using EscolaDeIdiomas.WebApi.Interfaces;
 
 namespace EscolaDeIdiomas.WebApi.Repositories
 {
-    public class TurmaRepository : ITurmaRepository
+    public class TurmaRepository : ITurmaRepository //Herdamos os métodos da interface
     {
         private readonly EscolaDeIdiomasContext ctx; //Criamos uma instância do context para maniluplação do banco de dados
 
@@ -49,7 +49,10 @@ namespace EscolaDeIdiomas.WebApi.Repositories
         {
             Turma turmaBuscada = ctx.Turmas.Find(idTurma);
 
-            if (turmaBuscada.Matriculas.Count > 0)
+            var alunosTurma = ctx.Matriculas.ToList()
+                .Where(x => x.idTurma == idTurma);
+
+            if (alunosTurma.Count() > 0)
             {
                 throw new Exception("Tem alunos matriculados nesta turma, não é possível exclui-la!");
             }

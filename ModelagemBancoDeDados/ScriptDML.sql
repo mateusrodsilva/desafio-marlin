@@ -16,7 +16,7 @@ VALUES('a4ec4f4e-2867-4b78-9029-e7d47aa2fb01','Mateus Rodrigues', '68098450031',
 GO
 
 
-INSERT INTO Turmas(idTurma, numeroTurma, anoLetivo, decricaoTurma)
+INSERT INTO Turmas(idTurma, numeroTurma, anoLetivo, descricaoTurma)
 VALUES('a6ffea61-862d-428e-b56f-9ddf8923bc6c',1,'2022','Inglês'),
 	('ce4cee97-bf73-432a-a50c-b69a23cf147a',2,'2023','Alemão'),
 	('1fb577b1-0aba-43b3-800c-7c6839a333b7',3,'2024','Espanhol')

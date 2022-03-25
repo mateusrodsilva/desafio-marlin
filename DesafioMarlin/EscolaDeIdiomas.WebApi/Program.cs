@@ -12,9 +12,12 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<EscolaDeIdiomasContext>(o => o.UseSqlServer("Data Source=LAPTOP-69MCT9P6; initial catalog=EscolaDeIdiomas; integrated Security=True;"));
+builder.Services.AddDbContext<EscolaDeIdiomasContext>(o => o.UseSqlServer("Data Source=LAPTOP-DFNK1JF6\\MATEUSSQLSERVER; initial catalog=EscolaDeIdiomas; integrated Security=True;"));
 
 builder.Services.AddTransient<IAlunoRepository, AlunoRepository>();
+builder.Services.AddTransient<ITurmaRepository, TurmaRepository>();
+builder.Services.AddTransient<IMatriculaRepository, MatriculaRepository>();
+
 
 
 

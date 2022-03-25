@@ -30,7 +30,7 @@ namespace EscolaDeIdiomas.WebApi.Migrations
                     idTurma = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     numeroTurma = table.Column<int>(type: "INTEGER", nullable: false),
                     anoLetivo = table.Column<string>(type: "varchar(4)", maxLength: 4, nullable: false),
-                    decricaoTurma = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false)
+                    descricaoTurma = table.Column<string>(type: "varchar(200)", maxLength: 200, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -72,12 +72,6 @@ namespace EscolaDeIdiomas.WebApi.Migrations
                 name: "IX_Alunos_email",
                 table: "Alunos",
                 column: "email",
-                unique: true);
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Alunos_nomeCompleto",
-                table: "Alunos",
-                column: "nomeCompleto",
                 unique: true);
 
             migrationBuilder.CreateIndex(

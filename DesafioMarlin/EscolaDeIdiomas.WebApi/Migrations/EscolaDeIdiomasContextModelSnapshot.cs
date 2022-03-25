@@ -51,9 +51,6 @@ namespace EscolaDeIdiomas.WebApi.Migrations
                     b.HasIndex("email")
                         .IsUnique();
 
-                    b.HasIndex("nomeCompleto")
-                        .IsUnique();
-
                     b.ToTable("Alunos", (string)null);
                 });
 
@@ -89,7 +86,7 @@ namespace EscolaDeIdiomas.WebApi.Migrations
                         .HasMaxLength(4)
                         .HasColumnType("varchar(4)");
 
-                    b.Property<string>("decricaoTurma")
+                    b.Property<string>("descricaoTurma")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("varchar(200)");

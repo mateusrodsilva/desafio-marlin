@@ -7,6 +7,7 @@ namespace EscolaDeIdiomas.WebApi.Domains
     {
         public Turma(int numeroTurma, string anoLetivo, string descricaoTurma)
         {
+            this.idTurma = Guid.NewGuid();
             this.numeroTurma = numeroTurma;
             this.anoLetivo = anoLetivo;
             this.descricaoTurma = descricaoTurma;

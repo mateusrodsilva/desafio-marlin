@@ -24,7 +24,7 @@ namespace EscolaDeIdiomas.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(AlunoCommand novoAluno)
+        public IActionResult Post(NovoAlunoCommand novoAluno)
         {
             _alunoRepository.Cadastro(novoAluno);
 

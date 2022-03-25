@@ -27,7 +27,6 @@ namespace EscolaDeIdiomas.WebApi.Contexts
             modelBuilder.Entity<Aluno>().Property(x => x.nomeCompleto).HasMaxLength(150);
             modelBuilder.Entity<Aluno>().Property(x => x.nomeCompleto).HasColumnType("varchar(150)");
             modelBuilder.Entity<Aluno>().Property(x => x.nomeCompleto).IsRequired();
-            modelBuilder.Entity<Aluno>().HasIndex(x => x.nomeCompleto).IsUnique();
 
             //CPF
             modelBuilder.Entity<Aluno>().Property(x => x.cpf).HasMaxLength(11);
@@ -59,9 +58,9 @@ namespace EscolaDeIdiomas.WebApi.Contexts
             modelBuilder.Entity<Turma>().Property(x => x.anoLetivo).IsRequired();
 
             //Descrição da turma
-            modelBuilder.Entity<Turma>().Property(x => x.decricaoTurma).HasMaxLength(200);
-            modelBuilder.Entity<Turma>().Property(x => x.decricaoTurma).HasColumnType("varchar(200)");
-            modelBuilder.Entity<Turma>().Property(x => x.decricaoTurma).IsRequired();
+            modelBuilder.Entity<Turma>().Property(x => x.descricaoTurma).HasMaxLength(200);
+            modelBuilder.Entity<Turma>().Property(x => x.descricaoTurma).HasColumnType("varchar(200)");
+            modelBuilder.Entity<Turma>().Property(x => x.descricaoTurma).IsRequired();
             #endregion
 
             #region Matriculas
